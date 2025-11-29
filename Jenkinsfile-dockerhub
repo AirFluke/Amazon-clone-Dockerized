@@ -20,7 +20,7 @@ pipeline {
                 scannerHome = tool 'sonar-scanner';
             }
             steps {
-              withSonarQubeEnv(credentialsId: 'ibt-sonar', installationName: 'IBT sonarqube') {
+              withSonarQubeEnv(credentialsId: 'sonarqube-token', installationName: 'sonarqube') {
                 sh "${scannerHome}/bin/sonar-scanner"
               }
             }
