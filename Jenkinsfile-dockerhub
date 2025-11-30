@@ -7,7 +7,6 @@ pipeline {
     environment {
     DOCKERHUB_CREDENTIALS = credentials('airfluke-docker-hub')
     APP_NAME = "airfluke/amazon"
-    PATH = "${scannerHome}/bin:/usr/local/bin:/usr/bin:/bin"
     }
     stages { 
         stage('SCM Checkout') {
