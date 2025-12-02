@@ -8,9 +8,6 @@ WORKDIR /usr/src/app
 COPY package.json .
 COPY yarn.lock .
 
-RUN yarn config set network-timeout 600000
-RUN yarn config set registry https://registry.npmjs.org/
-
 
 RUN yarn install 
 
